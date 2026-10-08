@@ -9,15 +9,131 @@
 </head>
 <body>
     <div class="header"><h1>❓ Помощь</h1></div>
-    <div class="container" id="content"><div class="loading">Загрузка...</div></div>
-    <div class="nav">
-        <a href="index.html" class="nav-item"><span class="icon">🏠</span>Главная</a>
-        <a href="top.html" class="nav-item"><span class="icon">🏆</span>Топ</a>
-        <a href="tournaments.html" class="nav-item"><span class="icon">⚔️</span>Турниры</a>
-        <a href="profile.html" class="nav-item"><span class="icon">👤</span>Профиль</a>
-        <a href="help.html" class="nav-item active"><span class="icon">❓</span>Помощь</a>
+
+    <div class="container">
+
+        <!-- ===== УРОВНИ FACEIT ===== -->
+        <div class="card">
+            <div class="card-title">📊 Уровни FACEIT</div>
+            <p class="desc">Уровень рассчитывается автоматически по ELO</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ур.</th>
+                        <th>ELO</th>
+                        <th>Группа</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="lvl" style="background:#4caf50">1</span></td><td>100–500</td><td>Новичок</td></tr>
+                    <tr><td><span class="lvl" style="background:#8bc34a">2</span></td><td>501–750</td><td>Новичок</td></tr>
+                    <tr><td><span class="lvl" style="background:#2196f3">3</span></td><td>751–900</td><td>Средний</td></tr>
+                    <tr><td><span class="lvl" style="background:#03a9f4">4</span></td><td>901–1050</td><td>Средний</td></tr>
+                    <tr><td><span class="lvl" style="background:#ffc107">5</span></td><td>1051–1200</td><td>Продвинутый</td></tr>
+                    <tr><td><span class="lvl" style="background:#ffeb3b">6</span></td><td>1201–1350</td><td>Продвинутый</td></tr>
+                    <tr><td><span class="lvl" style="background:#ff9800">7</span></td><td>1351–1530</td><td>Сильный</td></tr>
+                    <tr><td><span class="lvl" style="background:#ff5722">8</span></td><td>1531–1750</td><td>Сильный</td></tr>
+                    <tr><td><span class="lvl" style="background:#f44336">9</span></td><td>1751–2000</td><td>Профи</td></tr>
+                    <tr><td><span class="lvl" style="background:#d32f2f">10</span></td><td>2001+</td><td>Профи</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ===== ELO ЗА МАТЧ ===== -->
+        <div class="card">
+            <div class="card-title">💰 ELO за матч (1x1)</div>
+            <p class="desc">Матч идёт до <b>8 побед</b>. ELO зависит от счёта.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Счёт</th>
+                        <th style="text-align:center;">Победитель</th>
+                        <th style="text-align:center;">Проигравший</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>8-0</td><td class="win">+50</td><td class="lose">-50</td></tr>
+                    <tr><td>8-1</td><td class="win">+50</td><td class="lose">-50</td></tr>
+                    <tr><td>8-2</td><td class="win">+50</td><td class="lose">-50</td></tr>
+                    <tr><td>8-3</td><td class="win">+25</td><td class="lose">-25</td></tr>
+                    <tr><td>8-4</td><td class="win">+25</td><td class="lose">-25</td></tr>
+                    <tr><td>8-5</td><td class="win">+25</td><td class="lose">-25</td></tr>
+                    <tr><td>8-6</td><td class="win">+10</td><td class="lose">-10</td></tr>
+                    <tr><td>8-7</td><td class="win">+10</td><td class="lose">0</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ===== КАЛИБРОВКА ===== -->
+        <div class="card">
+            <div class="card-title">🎯 Калибровка</div>
+            <p class="desc">
+                <b>Первые 5 матчей</b> — калибровка. ELO не начисляется,<br>
+                вместо этого определяется <b>стартовый уровень</b>:
+            </p>
+            <table>
+                <tbody>
+                    <tr><td>5/5 побед</td><td class="gold">Уровень 8</td></tr>
+                    <tr><td>4/5 побед</td><td class="gold">Уровень 6</td></tr>
+                    <tr><td>3/5 побед</td><td class="gold">Уровень 4</td></tr>
+                    <tr><td>2/5 побед</td><td class="gold">Уровень 3</td></tr>
+                    <tr><td>1/5 побед</td><td class="gold">Уровень 2</td></tr>
+                    <tr><td>0/5 побед</td><td class="gold">Уровень 1</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ===== ПРАВИЛА ТУРНИРОВ ===== -->
+        <div class="card">
+            <div class="card-title">🏆 Правила турниров</div>
+            <ul>
+                <li>Формат — <b>1x1</b>, матч до <b>8 побед</b></li>
+                <li>Размер — <b>2, 4, 8, 16</b> игроков (single elimination)</li>
+                <li>Перед матчем — <b>добавьте соперника в друзья</b> в игре</li>
+                <li>После матча — <b>отправьте счёт и скриншот</b> боту</li>
+                <li>Результат <b>подтверждает админ</b> турнира</li>
+                <li>Проигравший — <b>выбывает</b> из сетки</li>
+            </ul>
+        </div>
+
+        <!-- ===== ВЕРИФИКАЦИЯ ===== -->
+        <div class="card">
+            <div class="card-title">🔐 Верификация</div>
+            <ul>
+                <li>Укажи <b>ID в игре</b> (буквы, цифры, <code>_</code>)</li>
+                <li>ID должен быть <b>уникальным</b></li>
+                <li>После отправки — <b>админ проверит</b></li>
+                <li>Верификация нужна <b>для участия</b> в турнирах</li>
+            </ul>
+        </div>
+
+        <!-- ===== ELO ===== -->
+        <div class="card">
+            <div class="card-title">📈 Как растёт ELO</div>
+            <ul>
+                <li>Стартовый ELO — <b>100</b></li>
+                <li>Максимальный ELO — <b>25000</b></li>
+                <li>За победу — <b>+10 … +50</b> ELO</li>
+                <li>За поражение — <b>-10 … -50</b> ELO</li>
+                <li>Уровень обновляется <b>автоматически</b></li>
+            </ul>
+        </div>
+
+        <!-- ===== КОНТАКТ ===== -->
+        <div class="card">
+            <div class="card-title">📞 Связь с админом</div>
+            <p class="desc">Если возник вопрос — напиши админу:</p>
+            <a href="https://t.me/amirzovgod" target="_blank" class="btn">
+                💬 @amirzovgod
+            </a>
+        </div>
+
     </div>
-    <script src="app.js"></script>
-    <script>loadHelp();</script>
+
+    <script>
+        // разворачиваем WebApp на весь экран
+        const tg = window.Telegram?.WebApp;
+        if (tg) { tg.ready(); tg.expand(); }
+    </script>
 </body>
 </html>
